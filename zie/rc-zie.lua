@@ -17,6 +17,10 @@ require "awful.autofocus"
 ------------------------------------------------------------
 local redflat = require "redflat"
 
+-- debug locker
+local lock = lock or {}
+
+redflat.startup.locked = lock.autostart
 redflat.startup:activate()
 
 -- Error handling
@@ -218,3 +222,10 @@ titlebar:init()
 -----------------------------------------------------------------------------------------------------------------------
 local signals = require "zie.signals-config"
 signals:init { env = env }
+
+-- Autostart user applications
+-----------------------------------------------------------------------------------------------------------------------
+if redflat.startup.is_startup then
+	local autostart = require("zie.autostart-config") -- load file with autostart application list
+	autostart.run()
+end

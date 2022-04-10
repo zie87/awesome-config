@@ -57,6 +57,7 @@ client.connect_signal("property::minimized", function(c)
     redflat.layout.map.clean_client(c)
   end
 end)
+
 client.connect_signal("property::floating", function(c)
   if c.floating and redflat.layout.map.check_client(c) then
     redflat.layout.map.clean_client(c)
