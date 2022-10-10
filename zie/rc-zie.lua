@@ -32,6 +32,8 @@ require "zie.ercheck-config"
 local env = require "zie.env-config"
 env:init()
 
+beautiful.wallpaper = awful.util.get_configuration_dir() .. "/wallpaper/cyan2.jpg" -- wallpaper file
+
 -- Layouts setup
 -------------------------------------------------------------------------------
 local layouts = require "zie.layout-config"

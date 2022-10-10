@@ -22,8 +22,9 @@ function autostart.run()
 	-- utils
 
 	-- apps
-	awful.spawn.with_shell("$HOME/.dropbox-dist/dropboxd")
-	awful.spawn.with_shell("/usr/bin/megasync")
+	awful.spawn.with_shell("/usr/bin/nm-applet")
+	-- awful.spawn.with_shell("$HOME/.dropbox-dist/dropboxd")
+	-- awful.spawn.with_shell("/usr/bin/megasync")
 end
 
 -- Read and commands from file and spawn them
